@@ -1,0 +1,24 @@
+name: Build Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Build project
+      run: |
+        # Füge hier die Befehle hinzu, um dein Projekt zu bauen
+        # z.B. npm install und npm run build
+
+    - name: Deploy
+      run: |
+        # Füge hier die Befehle hinzu, um deine Anwendung zu deployen
+        # z.B. scp oder rsync-Befehle für den Dateitransfer
